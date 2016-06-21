@@ -1,0 +1,36 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+   font: Arial, sans-serif;
+   color: #797878;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+
+.options-form {
+    width: auto;
+    background-color: white;
+    margin: 25px 15px;
+    border: 1px solid #dee0e1;
+    border-color: #D7D7D7;
+    padding: 10px 20px;
+    overflow: hidden;
+}
+.links {
+    font: 12px Arial, sans-serif;
+}
+.links a:hover {
+    text-decoration: none;
+}
+.links a {
+    text-decoration: underline;
+}
+.logout-div {
+    font: 12px Arial, sans-serif;
+}

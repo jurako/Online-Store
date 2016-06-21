@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/xampp/htdocs/OnlineShop/components/Db.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/config/db_params.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/controllers/MainController.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/components/Router.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/models/User.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/templates/css/main-style.css</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/views/admin/orders.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/views/cabinet/discounts.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/components/Filter.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/views/admin/addUser.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/models/Order.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/controllers/AdminController.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/views/products/view.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/components/Discount.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/views/admin/editUser.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/views/main/index.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/controllers/OrderController.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/views/admin/viewUser.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/controllers/ProductController.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/views/layouts/header.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/controllers/FilterController.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/views/catalog/index.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/controllers/UserController.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/config/routes.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/views/admin/viewOrder.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/controllers/CabinetController.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/views/cabinet/orders.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/views/admin/addProduct.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/views/products/index.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/controllers/CatalogController.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/views/admin/editProduct.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/views/admin/viewProduct.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/models/Category.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/models/Product.php</file>
+            <file>file:/C:/xampp/htdocs/OnlineShop/components/Cart.php</file>
+        </group>
+    </open-files>
+</project-private>
