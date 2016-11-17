@@ -4,7 +4,7 @@ $notavailable = [];?>
 <div id="middle">
     <style>
         body {
-            background-image: url(http://localhost/OnlineShop/templates/images/body_bg_image.png);
+            background-image: url(/templates/images/body_bg_image.png);
             background-position: center left;
             background-repeat: repeat;
             background-attachment: scroll;
@@ -31,7 +31,7 @@ $notavailable = [];?>
                               } ?>
                             <div class="cart-item">
                                 <div class="cart-item-pic">
-                                    <img src="http://localhost/OnlineShop/templates/images/products/productID_<?php echo $id;?>.jpg" alt="prod<?php echo $id;?>">
+                                    <img src="/templates/images/products/productID_<?php echo $id;?>.jpg" alt="prod<?php echo $id;?>">
                                 </div>
                                 <div class="cart-item-name">
                                     <a href="catalog/<?php echo $product['category_name'].'/'.$id; ?>" class="right-title" style=" font-weight: bold; display: inline-block; margin-top: 70px; font-size: 100%; line-height: 110%;"><?php echo $product['name']; ?></a>
@@ -45,7 +45,7 @@ $notavailable = [];?>
                                     <span style="font-size: 160%; margin-top: 70px; margin-left: 10px; color: #333333; line-height: 17px; float: left;">=</span>
                                 </div>
                                 <div class="cart-item-remove">
-                                    <a href="/OnlineShop/cart/remove/<?php echo $id; ?>" style="margin-top: 70px; margin-left: 10px; font-size: 100%; line-height: 110%; float: left; color: #CC5656; text-decoration: none">×</a>
+                                    <a href="/cart/remove/<?php echo $id; ?>" style="margin-top: 70px; margin-left: 10px; font-size: 100%; line-height: 110%; float: left; color: #CC5656; text-decoration: none">×</a>
                                 </div>                                
                                 <div class="cart-item-totalprice">
                                     <h2 class="right-title" style="margin-top: 70px; margin-left: 10px; font-size: 100%; line-height: 110%; float: left;"> <?php echo $product['price'] * $quantity; ?> €  </h2>
@@ -70,7 +70,7 @@ $notavailable = [];?>
                              endif;?>  
                         <div class="buy-cart">
                             <div class="addToCart_mainPage" style="float:right;">
-                                <form action="/OnlineShop/order" method="post">
+                                <form action="/order" method="post">
                                     <input style="width: 140px;"name="makeOrder" id="button" type="submit" value="ОФОРМИТЬ" class="add_to_cart_btn" onclick="prodAval(this.id)">
                                 </form>
                             </div>
