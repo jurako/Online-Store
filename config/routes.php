@@ -38,7 +38,7 @@ return array (
     'user/login' => 'user/login', //actionLogin v UserController
     'user/logout' => 'user/logout', //actionLogout v UserController
     
-    'OnlineShop' => 'main/index', // actionIndex в MainController
+    '' => 'main/index', // actionIndex в MainController
 );
 
 ?>

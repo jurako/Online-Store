@@ -1,10 +1,10 @@
 <?php
 
 return array (
-    'host' => 'localhost',
-    'dbname' => 'onlineshop',
-    'user' => 'root',
-    'password' => '',
+    'host' => 'e-veikals.area.lv',
+    'dbname' => 'eveikals_onlineshop',
+    'user' => '**************',
+    'password' => '***************',
 );
 
 ?>
