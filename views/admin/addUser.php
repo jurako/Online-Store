@@ -3,12 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>Личный кабинет</title>
-        <link rel="stylesheet" type="text/css" href="http://localhost/OnlineShop/templates/css/main-style.css">
-        <link rel="stylesheet" type="text/css" href="http://localhost/OnlineShop/templates/css/filters.css">
-        <link rel="stylesheet" type="text/css" href="http://localhost/OnlineShop/templates/css/cabinet.css">
+        <link rel="stylesheet" type="text/css" href="/templates/css/main-style.css">
+        <link rel="stylesheet" type="text/css" href="/templates/css/filters.css">
+        <link rel="stylesheet" type="text/css" href="/templates/css/cabinet.css">
         <style>
             body {
-                background-image: url(http://localhost/OnlineShop/templates/images/body_bg_image.png);
+                background-image: url(/templates/images/body_bg_image.png);
                 background-position: center left;
                 background-repeat: repeat;
                 background-attachment: scroll;
@@ -25,12 +25,12 @@
             <div id="middle" style="background-color: white; margin-top: 180px; padding-top: 5px; padding-bottom: 5px;">
                 <div class="options-form">
                     <div class="links fl">
-                        <a href="/OnlineShop/"><span style="font-weight: bold;">Вернуться в магазин</span></a>
+                        <a href="/"><span style="font-weight: bold;">Вернуться в магазин</span></a>
                     </div>
                     <div class="logout-div fr">
                         <?php echo $user['Name']; ?>
                         (
-                        <a href="/OnlineShop/user/logout" class="links">Выход</a>
+                        <a href="/user/logout" class="links">Выход</a>
                         )
                     </div>
                 </div>
@@ -39,11 +39,11 @@
                     Управление пользователями.
                 </div>
                 <div class="register-form" style="margin-bottom: 0px; border-bottom: 0px; padding: 5px 15px; color: #333333; font-weight: bold;">
-                    <div style="float: left; margin-right: 30px; "><a href="/OnlineShop/admin/users/add" style="font-weight: bold; color: #333333;">Добавить пользователя</a></div>
-                    <div style="float: left; margin-right: 30px;"><a href="/OnlineShop/admin/users/edit" style="font-weight: normal; color: #333333;">Редактировать пользователя</a></div>
-                    <div style="float: left; margin-right: 30px; "><a href="/OnlineShop/admin/products/add" style="font-weight: normal; color: #333333;">Добавить продукт</a></div>
-                    <div style="float: left; margin-right: 30px;"><a href="/OnlineShop/admin/products/edit" style="font-weight: normal; color: #333333;">Редактировать продукты</a></div>
-                    <div style="float: left; margin-right: 30px;"><a href="/OnlineShop/admin/orders" style="font-weight: normal; color: #333333;">Заказы</a></div>
+                    <div style="float: left; margin-right: 30px; "><a href="/admin/users/add" style="font-weight: bold; color: #333333;">Добавить пользователя</a></div>
+                    <div style="float: left; margin-right: 30px;"><a href="/admin/users/edit" style="font-weight: normal; color: #333333;">Редактировать пользователя</a></div>
+                    <div style="float: left; margin-right: 30px; "><a href="/admin/products/add" style="font-weight: normal; color: #333333;">Добавить продукт</a></div>
+                    <div style="float: left; margin-right: 30px;"><a href="/admin/products/edit" style="font-weight: normal; color: #333333;">Редактировать продукты</a></div>
+                    <div style="float: left; margin-right: 30px;"><a href="/admin/orders" style="font-weight: normal; color: #333333;">Заказы</a></div>
                 </div>                
                 <div class="register-form" style="margin-top: 0px; margin-bottom: 0px;">
                     <?php if ($result): 
@@ -58,7 +58,7 @@
                                 </ul>
                             </div>
                     <?php endif; ?>
-                    <form action='/OnlineShop/admin/users/add' method='post'>
+                    <form action='/admin/users/add' method='post'>
                         <div style=" width: 100%; height: 30px; padding-top: 10px;">
                            <div class="reg-label" style="float:left; font-weight: bold; margin-right: 217px;">Имя:</div>
                            <div class="reg-label" style="float: left; margin-right: 150px;"><input style="width: 150px;" type="text" name="userName" value='<?php echo $name; ?>'></div>
