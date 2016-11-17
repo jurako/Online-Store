@@ -4,11 +4,11 @@
     <head>
         <meta charset="UTF-8">
         <title>Регистрация</title>
-        <link rel="stylesheet" type="text/css" href="http://localhost/OnlineShop/templates/css/main-style.css">
-        <link rel="stylesheet" type="text/css" href="http://localhost/OnlineShop/templates/css/filters.css">
+        <link rel="stylesheet" type="text/css" href="/templates/css/main-style.css">
+        <link rel="stylesheet" type="text/css" href="/templates/css/filters.css">
         <style>
             body {
-                background-image: url(http://localhost/OnlineShop/templates/images/body_bg_image.png);
+                background-image: url(/templates/images/body_bg_image.png);
                 background-position: center left;
                 background-repeat: repeat;
                 background-attachment: scroll;
@@ -27,7 +27,7 @@
                     <?php if ($result): 
                         $userId = User::checkUserData($email, $password);
                         User::auth($userId);
-                        header ('Location: /OnlineShop/cabinet/');
+                        header ('Location: /cabinet/');
                     else: ?>
                     <div class="register-form">
                         <?php if (isset($errors) && is_array($errors)): ?>

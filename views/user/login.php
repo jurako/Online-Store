@@ -3,11 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <title>Регистрация</title>
-        <link rel="stylesheet" type="text/css" href="http://localhost/OnlineShop/templates/css/main-style.css">
-        <link rel="stylesheet" type="text/css" href="http://localhost/OnlineShop/templates/css/filters.css">
+        <link rel="stylesheet" type="text/css" href="/templates/css/main-style.css">
+        <link rel="stylesheet" type="text/css" href="/templates/css/filters.css">
         <style>
             body {
-                background-image: url(http://localhost/OnlineShop/templates/images/body_bg_image.png);
+                background-image: url(/templates/images/body_bg_image.png);
                 background-position: center left;
                 background-repeat: repeat;
                 background-attachment: scroll;
@@ -47,7 +47,7 @@
                                 <div style="margin-left: 155px;"><input id="button" type="submit" name="submit" value="ВОЙТИ" class="add_to_cart_btn"></div>
                             </div>
                             <div style="width: 100%; height: 20px; padding-top: 10px; padding-left: 160px;">
-                                <a href="/OnlineShop/user/register" class="register-if-not" >Зарегистрироваться</a>
+                                <a href="/user/register" class="register-if-not" >Зарегистрироваться</a>
                             </div>
                         </form>
                     </div>
