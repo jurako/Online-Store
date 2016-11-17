@@ -1,1 +1,1 @@
-# jurako.github.io
+# Online store
