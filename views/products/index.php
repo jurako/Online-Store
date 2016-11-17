@@ -8,7 +8,7 @@
                 <?php foreach ($products as $productItem):?>
                     <div class="single_product">
                         <div class="product_image">
-                            <a class="img" href="<?php echo $categoryInfo[0]['category_name'].'/'.$productItem['id']; ?>" style="background: url(http://localhost/OnlineShop/templates/images/products/productID_<?php echo $productItem['id']?>.jpg) center center no-repeat #fff;">
+                            <a class="img" href="<?php echo $categoryInfo[0]['category_name'].'/'.$productItem['id']; ?>" style="background: url(/templates/images/products/productID_<?php echo $productItem['id']?>.jpg) center center no-repeat #fff;">
                             </a>
                             <p style="margin: 10px 30px;font-size: 80%;">Доступность на складе:<?php if ($productItem['amount'] > 0) { 
                                                                                                         echo '<span style="color: green;" id="amount'; echo $productItem['id']; echo '"> '; 
@@ -32,7 +32,7 @@
                                 <?php echo $productItem['price']; ?> €
                             </div>
                             <div class="addToCart_mainPage">
-                                <form action="/OnlineShop/cart/add/<?php echo $productItem['id']; ?>" method="post">
+                                <form action="/cart/add/<?php echo $productItem['id']; ?>" method="post">
                                     <input id="quantity<?php echo $productItem['id']?>" type="text" class="quantity" name="quantity" size="3" value="1">
                                     <input id="button<?php echo $productItem['id']?>" type="submit" value="КУПИТЬ" class="add_to_cart_btn" onclick="prodAval(this.id)">
                                 </form>

@@ -6,7 +6,7 @@
             <div id="products_container">
                 <div class="product-left-side-container">
                     <div class="single-product-foto">                   
-                        <img class="single-product-image" src="http://localhost/OnlineShop/templates/images/products/productID_<?php echo $singleProduct['id']; ?>.jpg" alt=""> 
+                        <img class="single-product-image" src="/templates/images/products/productID_<?php echo $singleProduct['id']; ?>.jpg" alt=""> 
                     </div>
                     <p style="margin-left:65px; font-size: 80%; float: left;">Доступность на складе:<?php if ($singleProduct['amount'] > 0) { 
                                                                                 echo '<span style="color: green;" id="amount'; echo $singleProduct['id']; echo '"> '; 
@@ -17,7 +17,7 @@
                                                                                 echo '<span style="color: red;" id="amount'; echo $singleProduct['id']; echo '"> не доступен</span>';
                                                                                 }?></p> 
                     <div class="addToCart_mainPage" style="margin: 60px 65px;">
-                        <form action="/OnlineShop/cart/add/<?php echo $singleProduct['id']; ?>" method="post">
+                        <form action="/cart/add/<?php echo $singleProduct['id']; ?>" method="post">
                             <input id="quantity<?php echo $singleProduct['id']?>" type="text" class="quantity" name="quantity" size="3" value="1">
                             <input id="button<?php echo $singleProduct['id']?>" type="submit" value="КУПИТЬ" class="add_to_cart_btn" onclick="prodAval(this.id)">
                         </form>
@@ -50,7 +50,7 @@
                         <li>
                             <a class="title" href="catalog/<?php echo $product['categoryName'].'/'.$product['id']?>"><?php echo $product['name']; ?></a>
                             <a class="img" href="catalog/<?php echo $product['categoryName'].'/'.$product['id']?>">
-                                <img src="http://localhost/OnlineShop/templates/images/products/productID_<?php echo $product['id'] . '_small'?>.jpg" alt="<?php echo $product['name']; ?>">
+                                <img src="/templates/images/products/productID_<?php echo $product['id'] . '_small'?>.jpg" alt="<?php echo $product['name']; ?>">
                             </a>
                             <p class="price"><?php echo $product['price']; ?> €</p>
                         </li>
