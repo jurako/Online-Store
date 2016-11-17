@@ -3,12 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>Личный кабинет</title>
-        <link rel="stylesheet" type="text/css" href="http://localhost/OnlineShop/templates/css/main-style.css">
-        <link rel="stylesheet" type="text/css" href="http://localhost/OnlineShop/templates/css/filters.css">
-        <link rel="stylesheet" type="text/css" href="http://localhost/OnlineShop/templates/css/cabinet.css">
+        <link rel="stylesheet" type="text/css" href="/templates/css/main-style.css">
+        <link rel="stylesheet" type="text/css" href="/templates/css/filters.css">
+        <link rel="stylesheet" type="text/css" href="/templates/css/cabinet.css">
         <style>
             body {
-                background-image: url(http://localhost/OnlineShop/templates/images/body_bg_image.png);
+                background-image: url(/templates/images/body_bg_image.png);
                 background-position: center left;
                 background-repeat: repeat;
                 background-attachment: scroll;
@@ -25,16 +25,16 @@
             <div id="middle" style="background-color: white; margin-top: 180px; padding-top: 5px; padding-bottom: 5px; overflow: hidden;">
                 <div class="options-form">
                     <div class="links fl">
-                        <a href="/OnlineShop/"><span style="font-weight: bold;">Вернуться в магазин</span></a><span style="margin: 0 7px;">|</span>
-                        <a href="/OnlineShop/cabinet/contactinfo">Контактные данные</a><span style="margin: 0 7px;">|</span>
-                        <a href="/OnlineShop/cabinet/orders">Заказы</a><span style="margin: 0 7px;">|</span>
-                        <a href="/OnlineShop/cabinet/discounts">Скидки</a><span style="margin: 0 7px;">|</span>
-                        <a href="/OnlineShop/cabinet/contactshop">Обратная связь</a>
+                        <a href="/"><span style="font-weight: bold;">Вернуться в магазин</span></a><span style="margin: 0 7px;">|</span>
+                        <a href="/cabinet/contactinfo">Контактные данные</a><span style="margin: 0 7px;">|</span>
+                        <a href="/cabinet/orders">Заказы</a><span style="margin: 0 7px;">|</span>
+                        <a href="/cabinet/discounts">Скидки</a><span style="margin: 0 7px;">|</span>
+                        <a href="/cabinet/contactshop">Обратная связь</a>
                     </div>
                     <div class="logout-div fr">
                         <?php echo $user['Name']; ?>
                         (
-                        <a href="/OnlineShop/user/logout" class="links">Выход</a>
+                        <a href="/user/logout" class="links">Выход</a>
                         )
                     </div>
                 </div>
@@ -52,7 +52,7 @@
                             </div>
                         <?php endif; ?>
                 <div class="register-form" style="width: 600px; float: left;">
-                    <form method="post" action="/OnlineShop/order/confirm">
+                    <form method="post" action="/order/confirm">
                         <div style=" width: 100%; height: 30px;">
                             <div class="reg-label" style="margin:10px px; font-size: 100%; font-weight: bold;">Контактные данные:</div>
                         </div>
@@ -102,7 +102,7 @@
                 </div>
                 <div class="register-form" style="width: 200px; height: 400px; float: right;">
                     <div style="width: auto; height: 20px; border-bottom: 1px solid #dee0e1; text-align: center;">
-                        <a href="/OnlineShop/cart" style="color: "><span style="font-weight: bold">Ваш заказ</span> (<?php echo $_SESSION['cartCount']; ?> товара) </a>
+                        <a href="/cart" style="color: "><span style="font-weight: bold">Ваш заказ</span> (<?php echo $_SESSION['cartCount']; ?> товара) </a>
                     </div>
                     <div style="width: auto; margin-top: 10px; border-bottom: 1px solid #dee0e1; overflow: hidden;">
                             <?php $db = Db::getConnection();
