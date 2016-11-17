@@ -37,13 +37,13 @@ class CartController {
         if (isset($_SESSION['userId'])) {
             $available = Cart::checkAvailable();
             if ($available)
-                header ('Location: /OnlineShop/views/order/index.php');
+                header ('Location: /views/order/index.php');
             else {
                 require_once ROOT.'/views/cart/index.php';
                 return true;
             }
         } else
-            header ('Location: /OnlineShop/user/login');
+            header ('Location: /user/login');
     }
     
 }

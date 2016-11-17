@@ -1,6 +1,6 @@
 <?php
-include_once ROOT . '../models/User.php';
-include_once ROOT . '../components/Cart.php';
+include_once ROOT . '/models/User.php';
+include_once ROOT . '/components/Cart.php';
 
 class UserController {
     
@@ -14,12 +14,12 @@ class UserController {
         $result = false;
         
         if (isset($_POST['registerSubmit'])) {
-            $name = $_POST['name'];
-            $surname = $_POST['surname'];
-            $email = $_POST['email'];
-            $address = $_POST['address'];
-            $phone = $_POST['phone'];
-            $password = $_POST['password'];
+            $name = htmlspecialchars($_POST['name']);
+            $surname = htmlspecialchars($_POST['surname']);
+            $email = htmlspecialchars($_POST['email']);
+            $address = htmlspecialchars($_POST['address']);
+            $phone = htmlspecialchars($_POST['phone']);
+            $password = htmlspecialchars($_POST['password']);
 
             $errors = false;
             
@@ -61,8 +61,8 @@ class UserController {
         $password = '';
         
         if (isset($_POST['submit'])) {
-            $email = $_POST['email'];
-            $password = $_POST['password'];
+            $email = htmlspecialchars($_POST['email']);
+            $password = htmlspecialchars($_POST['password']);
             
             $errors = false;
             
@@ -84,17 +84,17 @@ class UserController {
                 
                 switch ($role) {
                     case 1:
-                        header('Location: /OnlineShop/admin/users/add');
+                        header('Location: /admin/users/add');
                         break;
                     case 2:
-                        header('Location: /OnlineShop/admin/products/add');
+                        header('Location: /admin/products/add');
                         break;
                     case 3:
                         Cart::getCart($userId);
                         $_SESSION['cartSum'] = Cart::getSum();
                         $_SESSION['cartCount'] = Cart::countItems();
 
-                        header('Location: /OnlineShop/cabinet/orders');
+                        header('Location: /cabinet/orders');
                         break;
                     default:
                         break;
@@ -110,7 +110,7 @@ class UserController {
     public function actionLogout() {
         Cart::saveCart();
         unset($_SESSION['userId']);
-        header ('Location: /OnlineShop/');
+        header ('Location: /');
     }
 }
 

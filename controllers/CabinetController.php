@@ -32,12 +32,12 @@ class CabinetController {
         $result = false;
         
         if (isset($_POST['editPersonalData'])) {
-            $name = $_POST['name'];
-            $surname = $_POST['surname'];
-            $email = $_POST['email'];
-            $address = $_POST['address'];
-            $phone = $_POST['phone'];
-            $password = $_POST['password'];
+            $name = htmlspecialchars($_POST['name']);
+            $surname = htmlspecialchars($_POST['surname']);
+            $email = htmlspecialchars($_POST['email']);
+            $address = htmlspecialchars($_POST['address']);
+            $phone = htmlspecialchars($_POST['phone']);
+            $password = htmlspecialchars($_POST['password']);
 
             $errors = false;
             
@@ -89,8 +89,8 @@ class CabinetController {
         $feedback = '';
         
         if (isset($_POST['submitFeedback'])) {
-            $feedback = $_POST['feedback'];
-            $email = $_POST['email'];
+            $feedback = htmlspecialchars($_POST['feedback']);
+            $email = htmlspecialchars($_POST['email']);
             
             $errors = false;
             

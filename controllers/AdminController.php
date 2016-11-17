@@ -12,9 +12,9 @@ class AdminController {
         $userId = User::checkLogged();
         $user = User::getUserById($userId);
         if ($user['Role'] == 3) {
-            header ('Location: /OnlineShop');
+            header ('Location: /');
         } else if ($user['Role'] == 2) {
-            header ('Location: /OnlineShop/admin/products/add');
+            header ('Location: /admin/products/add');
         }
         
         $name = '';
@@ -27,13 +27,13 @@ class AdminController {
         $result = false;
         
         if (isset($_POST['submitAddUser'])) {
-            $name = $_POST['userName'];
-            $surname = $_POST['userSurname'];
-            $email = $_POST['userEmail'];
-            $phone = $_POST['userPhone'];
-            $address = $_POST['userAddress'];
-            $password = $_POST['userPassword']; 
-            $role = $_POST['userRole'];
+            $name = htmlspecialchars($_POST['userName']);
+            $surname = htmlspecialchars($_POST['userSurname']);
+            $email = htmlspecialchars($_POST['userEmail']);
+            $phone = htmlspecialchars($_POST['userPhone']);
+            $address = htmlspecialchars($_POST['userAddress']);
+            $password = htmlspecialchars($_POST['userPassword']); 
+            $role = htmlspecialchars($_POST['userRole']);
             
             $errors = false;
             
@@ -82,7 +82,7 @@ class AdminController {
         $userId = User::checkLogged();
         $user = User::getUserById($userId);
         if ($user['Role'] == 3) {
-            header ('Location: /OnlineShop');
+            header ('Location: /');
         }  
         
         $users = User::getUsers();
@@ -95,7 +95,7 @@ class AdminController {
         $userId = User::checkLogged();
         $user = User::getUserById($userId);
         if ($user['Role'] == 3) {
-            header ('Location: /OnlineShop');
+            header ('Location: /');
         }  
         
         $viewedUser = User::getUserById($id);
@@ -111,13 +111,13 @@ class AdminController {
         $result = false;
         
         if (isset($_POST['submitEditUser'])) {
-            $name = $_POST['userName'];
-            $surname = $_POST['userSurname'];
-            $email = $_POST['userEmail'];
-            $phone = $_POST['userPhone'];
-            $address = $_POST['userAddress'];
-            $password = $_POST['userPassword']; 
-            $role = $_POST['userRole']; 
+            $name = htmlspecialchars($_POST['userName']);
+            $surname = htmlspecialchars($_POST['userSurname']);
+            $email = htmlspecialchars($_POST['userEmail']);
+            $phone = htmlspecialchars($_POST['userPhone']);
+            $address = htmlspecialchars($_POST['userAddress']);
+            $password = htmlspecialchars($_POST['userPassword']); 
+            $role = htmlspecialchars($_POST['userRole']); 
             
             $errors = false;
             
@@ -160,7 +160,7 @@ class AdminController {
         
         if (isset($_POST['submitDeleteUser'])) {
             User::deleteUser($id);
-            header ('Location: /OnlineShop/admin/users/edit/');
+            header ('Location: /admin/users/edit/');
             return true;
         }
         
@@ -172,7 +172,7 @@ class AdminController {
         $userId = User::checkLogged();
         $user = User::getUserById($userId);
         if ($user['Role'] == 3) {
-            header ('Location: /OnlineShop');
+            header ('Location: /');
         }
         $categories = Category::getCategories();
         
@@ -185,12 +185,12 @@ class AdminController {
         $result = false;
         
         if (isset($_POST['submitAddProduct'])) {
-            $name = $_POST['productName'];
-            $price = $_POST['productPrice'];
-            $charact = $_POST['productCharact'];
-            $desc = $_POST['productDesc'];
-            $amount = $_POST['productAmount'];
-            $category = $_POST['productCategory']; 
+            $name = htmlspecialchars($_POST['productName']);
+            $price = htmlspecialchars($_POST['productPrice']);
+            $charact = htmlspecialchars($_POST['productCharact']);
+            $desc = htmlspecialchars($_POST['productDesc']);
+            $amount = htmlspecialchars($_POST['productAmount']);
+            $category = htmlspecialchars($_POST['productCategory']); 
             
             $errors = false;
             
@@ -230,7 +230,7 @@ class AdminController {
         $userId = User::checkLogged();
         $user = User::getUserById($userId);
         if ($user['Role'] == 3) {
-            header ('Location: /OnlineShop');
+            header ('Location: /');
         }  
         
         $products = Product::getProducts();
@@ -243,7 +243,7 @@ class AdminController {
         $userId = User::checkLogged();
         $user = User::getUserById($userId);
         if ($user['Role'] == 3) {
-            header ('Location: /OnlineShop');
+            header ('Location: /');
         }  
         
         $product = Product::getProduct($id);
@@ -257,12 +257,12 @@ class AdminController {
         $result = false;
         
         if (isset($_POST['submitEditProduct'])) {
-            $name = $_POST['productName'];
-            $price = $_POST['productPrice'];
-            $charact = $_POST['productCharact'];
-            $desc = $_POST['productDesc'];
-            $amount = $_POST['productAmount'];
-            $category = $_POST['productCategory']; 
+            $name = htmlspecialchars($_POST['productName']);
+            $price = htmlspecialchars($_POST['productPrice']);
+            $charact = htmlspecialchars($_POST['productCharact']);
+            $desc = htmlspecialchars($_POST['productDesc']);
+            $amount = htmlspecialchars($_POST['productAmount']);
+            $category = htmlspecialchars($_POST['productCategory']); 
             
             $errors = false;
             
@@ -296,7 +296,7 @@ class AdminController {
         
         if (isset($_POST['submitDeleteProduct'])) {
             Product::deleteproduct($id);
-            header ('Location: /OnlineShop/admin/products/edit/');
+            header ('Location: /admin/products/edit/');
             return true;
         }
         
@@ -309,7 +309,7 @@ class AdminController {
         $userId = User::checkLogged();
         $user = User::getUserById($userId);
         if ($user['Role'] == 3) {
-            header ('Location: /OnlineShop');
+            header ('Location: /');
         }  
         
         $users = User::getUsers();
@@ -322,7 +322,7 @@ class AdminController {
         $userId = User::checkLogged();
         $user = User::getUserById($userId);
         if ($user['Role'] == 3) {
-            header ('Location: /OnlineShop');
+            header ('Location: /');
         }  
         $viewedUser = User::getUserById($id);
         

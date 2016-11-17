@@ -1,6 +1,6 @@
 <?php
 
-include_once ROOT . '../components/Filter.php';
+include_once ROOT . '/components/Filter.php';
 
 class FilterController 
 {

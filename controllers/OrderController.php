@@ -37,11 +37,11 @@ class OrderController {
         $giveDiscount = false;
         
         if (isset($_POST['confirmOrder'])) {
-            $name = $_POST['name'];
-            $surname = $_POST['surname'];
-            $email = $_POST['email'];
-            $address = $_POST['address'];
-            $phone = $_POST['phone'];
+            $name = htmlspecialchars($_POST['name']);
+            $surname = htmlspecialchars($_POST['surname']);
+            $email = htmlspecialchars($_POST['email']);
+            $address = htmlspecialchars($_POST['address']);
+            $phone = htmlspecialchars($_POST['phone']);
             if (isset($_POST['delivery'])) {
                 if ($_POST['delivery'] == 'po_pochte') {
                     $delivery = "po_pochte";
@@ -49,10 +49,10 @@ class OrderController {
                     $delivery = "kurjerom";
                 }
             }
-            $comment = $_POST['comment'];
+            $comment = htmlspecialchars($_POST['comment']);
             
             if (isset($_POST['discount']) && !empty($_POST['discount'])) {
-                $discount = $_POST['discount'];
+                $discount = htmlspecialchars($_POST['discount']);
                 if (Discount::checkExists($discount)) {
                     if (Discount::checkStatus($discount)) {
                         if (Discount::checkUser($discount, $_SESSION['userId'])) {
@@ -92,7 +92,7 @@ class OrderController {
                 unset($_SESSION['cart'], $_SESSION['cartSum'], $_SESSION['cartCount']);
                 Cart::deleteUserFromCart($_SESSION['userId']);
                 
-                header ('Location: /OnlineShop/cabinet/orders/' . $orderID);
+                header ('Location: /cabinet/orders/' . $orderID);
                 return true; 
             }  else {
                 require_once ROOT. '/views/order/index.php';
