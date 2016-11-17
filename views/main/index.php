@@ -19,7 +19,10 @@
     <div id="content">
         <div id="left-part">
             <div id="slider">
-                <img id="slide" src="templates/images/slider_image_2.jpg" alt="slider_image_2">
+	      <ul id="slides">
+		<li class="slide showing"><img id="slide" src="/templates/images/slider_image_2.jpg" alt="slider_image_2"></li>
+		<li class="slide"><img id="slide" src="/templates/images/slider_image_1.jpg" alt="slider_image_1"></li>
+ 	      </ul> 
             </div>
             <div id="products_container">
                 <?php foreach ($newProducts as $newProductItem):?>
