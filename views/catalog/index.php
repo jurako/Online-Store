@@ -8,7 +8,7 @@
                 <?php foreach ($categories as $categoryItem): ?>         
                     <div class='category-item' >
                         <a class='category-pic' href='catalog/<?php echo $categoryItem['name_latin'] ?>'>
-                            <img src='http://localhost/OnlineShop/templates/images/categories/categoryID_<?php echo $categoryItem['id'] ?>.jpg' alt='category_<?php echo $categoryItem['id'] ?>'>
+                            <img src='/templates/images/categories/categoryID_<?php echo $categoryItem['id'] ?>.jpg' alt='category_<?php echo $categoryItem['id'] ?>'>
                         </a>
                         <div class="aligner">                
                             <a class="item-name" href='catalog/<?php echo $categoryItem['name_latin'] ?>'><?php echo $categoryItem['name']?></a>
@@ -25,7 +25,7 @@
                         <li>
                             <a class="title" href="catalog/<?php echo $product['categoryName'].'/'.$product['id']?>"><?php echo $product['name']; ?></a>
                             <a class="img" href="catalog/<?php echo $product['categoryName'].'/'.$product['id']?>">
-                                <img src="http://localhost/OnlineShop/templates/images/products/productID_<?php echo $product['id'] . '_small'?>.jpg" alt="<?php echo $product['name']; ?>">
+                                <img src="/templates/images/products/productID_<?php echo $product['id'] . '_small'?>.jpg" alt="<?php echo $product['name']; ?>">
                             </a>
                             <p class="price"><?php echo $product['price']; ?> €</p>
                         </li>
