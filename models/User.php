@@ -112,7 +112,7 @@ class User {
              return $_SESSION['userId'];
          }
          
-         header ('Location: /OnlineShop/user/login');
+         header ('Location: /user/login');
     }    
     
     public static function isGuest() {

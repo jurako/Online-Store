@@ -77,6 +77,8 @@ class Product
        
         $productsList = array();
         
+        $category = htmlspecialchars($catregory);
+        
         $catNum = $db->query('SELECT Category_ID FROM categories WHERE NameLatin="'.$category.'"');
         $catNum = $catNum->fetch();
         
@@ -107,6 +109,7 @@ class Product
         $db = Db::getConnection();
        
         $product = array();
+        $category = htmlspecialchars($catregory);
 
         $catNum = $db->query('SELECT Category_ID, Name FROM categories WHERE NameLatin="'.$category.'"');
         $catNum = $catNum->fetch();
@@ -122,7 +125,7 @@ class Product
             $product['category'] = $catNum[1];
         }
         if (empty($product))
-            header('Location: http://localhost/OnlineShop/catalog/'.$category);
+            header('Location: /catalog/'.$category);
         else
             return $product;
     }
@@ -153,7 +156,7 @@ class Product
             else {
                 $db = Db::getConnection();
                 
-                Product::$searchString = $_POST['searchTextBox'];
+                Product::$searchString = htmlspecialchars($_POST['searchTextBox']);
                 $searchRes = $_POST['searchTextBox'];   
                 $searchRes = '%' . $searchRes . '%';
                 
